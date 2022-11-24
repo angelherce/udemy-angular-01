@@ -6,7 +6,7 @@
 
 ## Contenido del cusro
 
-- [ ] **Sección 1:** _Introducción_
+- [x] **Sección 1:** _Introducción_
 - [ ] **Sección 2:** _Instalaciones y primeros pasos_
 - [ ] **Sección 3:** _Componenentes y plantillas_
 - [ ] **Sección 4:** _TypeScript dentro de Angular_
