@@ -8,15 +8,15 @@ import { Employee } from './employee';
 })
 export class EmployeeComponent{
    public title: string = 'Título del componente Employee';
-   public employee: Array<Employee>;
+   public employees: Array<Employee>;
 
    public constructor() {
-      this.employee = [];
-      this.employee.push( new Employee( 'Ángel', 30, false ) );
-      this.employee.push( new Employee( 'Juan', 25, true ) );
-      this.employee.push( new Employee( 'Patricia', 29, false ) );
-      this.employee.push( new Employee( 'Sara', 26, true ) );
-      this.employee.push( new Employee( 'Manuela', 27, true ) );
+      this.employees = [];
+      this.employees.push( new Employee( 'Ángel', 30, false ) );
+      this.employees.push( new Employee( 'Juan', 25, true ) );
+      this.employees.push( new Employee( 'Patricia', 29, false ) );
+      this.employees.push( new Employee( 'Sara', 26, true ) );
+      this.employees.push( new Employee( 'Manuela', 27, true ) );
    }
 
    public switchExternal( employee: Employee ): void{

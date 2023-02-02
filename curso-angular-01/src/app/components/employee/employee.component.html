@@ -3,22 +3,18 @@
    <div>
       <h2>Trabajadores Internos</h2>
       <ul>
-         <li *ngIf="!employee[0].isExternal()" (click)="switchExternal( employee[0] )"> Empleado: {{employee[0].getName()}} | Edad: {{employee[0].getAge()}}</li>
-         <li *ngIf="!employee[1].isExternal()" (click)="switchExternal( employee[1] )"> Empleado: {{employee[1].getName()}} | Edad: {{employee[1].getAge()}}</li>
-         <li *ngIf="!employee[2].isExternal()" (click)="switchExternal( employee[2] )"> Empleado: {{employee[2].getName()}} | Edad: {{employee[2].getAge()}}</li>
-         <li *ngIf="!employee[3].isExternal()" (click)="switchExternal( employee[3] )"> Empleado: {{employee[3].getName()}} | Edad: {{employee[3].getAge()}}</li>
-         <li *ngIf="!employee[4].isExternal()" (click)="switchExternal( employee[4] )"> Empleado: {{employee[4].getName()}} | Edad: {{employee[4].getAge()}}</li>
+         <ng-container *ngFor="let employee of employees; let i = index">
+            <li *ngIf="!employee.isExternal()" (click)="switchExternal( employee )">{{i+1}} - Empleado: {{employee.getName()}} | Edad: {{employee.getAge()}}</li>
+         </ng-container>
       </ul>
    </div>
 
    <div>
       <h2>Trabajadores Externos</h2>
       <ul>
-         <li *ngIf="employee[0].isExternal()" (click)="switchExternal( employee[0] )"> Empleado: {{employee[0].getName()}} | Edad: {{employee[0].getAge()}}</li>
-         <li *ngIf="employee[1].isExternal()" (click)="switchExternal( employee[1] )"> Empleado: {{employee[1].getName()}} | Edad: {{employee[1].getAge()}}</li>
-         <li *ngIf="employee[2].isExternal()" (click)="switchExternal( employee[2] )"> Empleado: {{employee[2].getName()}} | Edad: {{employee[2].getAge()}}</li>
-         <li *ngIf="employee[3].isExternal()" (click)="switchExternal( employee[3] )"> Empleado: {{employee[3].getName()}} | Edad: {{employee[3].getAge()}}</li>
-         <li *ngIf="employee[4].isExternal()" (click)="switchExternal( employee[4] )"> Empleado: {{employee[4].getName()}} | Edad: {{employee[4].getAge()}}</li>
+         <ng-container *ngFor="let employee of employees; let i = index">
+            <li *ngIf="employee.isExternal()" (click)="switchExternal( employee )">{{i+1}} - Empleado: {{employee.getName()}} | Edad: {{employee.getAge()}}</li>
+         </ng-container>
       </ul>
    </div>
 </div>
