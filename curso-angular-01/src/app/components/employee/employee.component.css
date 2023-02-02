@@ -41,3 +41,8 @@ ul > li:hover {
    width: 250px;
    height: 100px;
 }
+
+#color-selector > .field.correct{
+   border: 10px solid lime;
+   border-radius: 50%;
+}
