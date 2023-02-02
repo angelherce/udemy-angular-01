@@ -39,5 +39,7 @@
 <div id="color-selector">
    <input type="text" [(ngModel)]="colorSelected"/>
 
-   <div class="field" [ngStyle]="{'background-color': colorSelected}">{{colorSelected}}</div>
+   <div class="field"
+        [ngStyle]="{'background-color': colorSelected}"
+        [style.color]="colorSelected == 'black' ? 'white' : 'black'" >{{colorSelected}}</div>
 </div>

@@ -22,7 +22,7 @@ export class EmployeeComponent{
       this.employees.push( new Employee( 'Manuela', 27, true ) );
 
       this.color = 'yellow';
-      this.colorSelected = 'cyan';
+      this.colorSelected = 'black';
    }
 
    public switchExternal( employee: Employee ): void{
