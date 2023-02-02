@@ -11,6 +11,7 @@ export class EmployeeComponent{
    public employees: Array<Employee>;
 
    public color: string;
+   public colorSelected: string;
 
    public constructor() {
       this.employees = [];
@@ -21,6 +22,7 @@ export class EmployeeComponent{
       this.employees.push( new Employee( 'Manuela', 27, true ) );
 
       this.color = 'yellow';
+      this.colorSelected = 'cyan';
    }
 
    public switchExternal( employee: Employee ): void{

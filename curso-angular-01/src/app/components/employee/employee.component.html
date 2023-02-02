@@ -31,3 +31,13 @@
    <p *ngSwitchCase="'green'" [ngStyle]="{'background-color': color, 'color': '#FFF' }">Es de color Verde</p>
    <p *ngSwitchCase="'yellow'" [ngStyle]="{'background-color': color, 'color': '#333' }">Es de color Amarillo</p>
 </div>
+
+<hr/>
+
+<h2>Selector de Colores</h2>
+
+<div id="color-selector">
+   <input type="text" [(ngModel)]="colorSelected"/>
+
+   <div class="field" [ngStyle]="{'background-color': colorSelected}">{{colorSelected}}</div>
+</div>

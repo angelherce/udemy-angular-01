@@ -1,3 +1,7 @@
+hr{
+   margin: 25px 0;
+}
+
 #employees{
    display: flex;
 }
@@ -27,4 +31,13 @@ ul > li {
 ul > li:hover {
    background-color: #333;
    color: #FFF;
+}
+
+#color-selector > input{
+   margin-bottom: 15px;
+}
+
+#color-selector > .field{
+   width: 250px;
+   height: 100px;
 }
