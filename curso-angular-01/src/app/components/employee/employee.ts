@@ -11,7 +11,8 @@ export class Employee{
 
    public constructor(
       private name: string,
-      private age: number
+      private age: number,
+      private external: boolean
    ) {}
 
    public setName( name: string ): void{
@@ -28,6 +29,14 @@ export class Employee{
 
    public getAge(): number{
       return this.age;
+   }
+
+   public setExternal( external: boolean ): void{
+      this.external = external;
+   }
+
+   public isExternal(): boolean{
+      return this.external;
    }
 
 }
