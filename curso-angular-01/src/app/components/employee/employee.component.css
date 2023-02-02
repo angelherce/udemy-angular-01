@@ -46,3 +46,8 @@ ul > li:hover {
    border: 10px solid lime;
    border-radius: 50%;
 }
+
+#color-selector > .field.incorrect{
+   border: 10px solid red;
+   border-radius: 15%;
+}

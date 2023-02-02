@@ -42,5 +42,9 @@
    <div class="field"
         [ngStyle]="{'background-color': colorSelected}"
         [style.color]="colorSelected == 'black' ? 'white' : 'black'"
-        [class.correct]="colorSelected === 'cyan'" >{{colorSelected}}</div>
+        [ngClass]="{
+            correct: colorSelected === 'cyan' || colorSelected === 'yellow',
+            incorrect: colorSelected != 'cyan' && colorSelected != 'yellow'
+         }"
+   >{{colorSelected}}</div>
 </div>
