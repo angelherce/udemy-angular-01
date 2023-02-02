@@ -1,4 +1,7 @@
 <h1>{{title}}</h1>
+
+<hr/>
+
 <div id="employees">
    <div>
       <h2>Trabajadores Internos</h2>
@@ -17,4 +20,14 @@
          </ng-container>
       </ul>
    </div>
+</div>
+
+<hr/>
+
+<h2>Colores Switch</h2>
+<div id="colors" [ngSwitch]="color">
+   <p *ngSwitchCase="'cyan'" [ngStyle]="{'background-color': color, 'color': '#FFF' }">Es de color Cian</p>
+   <p *ngSwitchCase="'red'" [ngStyle]="{'background-color': color, 'color': '#FFF' }">Es de color Rojo</p>
+   <p *ngSwitchCase="'green'" [ngStyle]="{'background-color': color, 'color': '#FFF' }">Es de color Verde</p>
+   <p *ngSwitchCase="'yellow'" [ngStyle]="{'background-color': color, 'color': '#333' }">Es de color Amarillo</p>
 </div>

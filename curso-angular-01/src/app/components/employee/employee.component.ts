@@ -10,6 +10,8 @@ export class EmployeeComponent{
    public title: string = 'Título del componente Employee';
    public employees: Array<Employee>;
 
+   public color: string;
+
    public constructor() {
       this.employees = [];
       this.employees.push( new Employee( 'Ángel', 30, false ) );
@@ -17,6 +19,8 @@ export class EmployeeComponent{
       this.employees.push( new Employee( 'Patricia', 29, false ) );
       this.employees.push( new Employee( 'Sara', 26, true ) );
       this.employees.push( new Employee( 'Manuela', 27, true ) );
+
+      this.color = 'yellow';
    }
 
    public switchExternal( employee: Employee ): void{
