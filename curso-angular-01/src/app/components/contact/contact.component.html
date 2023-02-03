@@ -1,3 +1,7 @@
 <h1>{{title}}</h1>
 
 <h2 *ngIf="msg">MESSAGE: {{msg}}</h2>
+
+<hr/>
+
+<button *ngIf="!msg" (click)="redirect()">Ir a la página con parámetro</button>

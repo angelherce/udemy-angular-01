@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { Router, ActivatedRoute, Params } from '@angular/router';
 
 @Component({
    selector: 'contact',
@@ -10,7 +10,8 @@ export class ContactComponent {
    public msg: string;
 
    public constructor(
-      private _route: ActivatedRoute
+      private _route: ActivatedRoute,
+      private _router: Router
    ) {
 
       this.title = 'Contact Title';
@@ -21,5 +22,9 @@ export class ContactComponent {
       this._route.params.forEach( (params: Params) => {
          this.msg = params[ 'msg' ];
       });
+   }
+
+   public redirect(): void{
+      this._router.navigate([ '/contact', 'Hi World !!' ])
    }
 }
