@@ -10,6 +10,7 @@ export class HomeComponent{
    public title: string;
    public ropa: Array<string>;
    public prendaToInsert: string;
+   public date: Date;
 
    public constructor(
       private _ropaService: RopaService
@@ -18,6 +19,7 @@ export class HomeComponent{
       this.title = 'Home Title';
       this.ropa = [];
       this.prendaToInsert = '';
+      this.date = new Date( 2023, 1, 10 );
    }
 
    public ngOnInit(): void{
