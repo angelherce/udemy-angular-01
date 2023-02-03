@@ -1,5 +1,10 @@
 <h1>{{title}}</h1>
 
+<input type="text" [(ngModel)]="prendaToInsert"/>
+<button (click)="save()">Save</button>
+
+<hr/>
+
 <ul>
-   <li *ngFor="let target of ropa">{{target}}</li>
+   <li *ngFor="let target of ropa ; let i = index">{{target}} - <button (click)="delete( i )">Eliminar</button></li>
 </ul>

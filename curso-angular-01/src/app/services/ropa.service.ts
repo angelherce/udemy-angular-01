@@ -12,4 +12,12 @@ export class RopaService{
    public findAll(): Array<string>{
       return this.data;
    }
+
+   public insert( ropa: string ): void{
+      this.data.push( ropa );
+   }
+
+   public delete( index: number ): void{
+      this.data.splice( index, 1 );
+   }
 }

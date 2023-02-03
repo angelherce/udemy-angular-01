@@ -9,6 +9,7 @@ import { RopaService } from '../../services/ropa.service';
 export class HomeComponent{
    public title: string;
    public ropa: Array<string>;
+   public prendaToInsert: string;
 
    public constructor(
       private _ropaService: RopaService
@@ -16,9 +17,19 @@ export class HomeComponent{
 
       this.title = 'Home Title';
       this.ropa = [];
+      this.prendaToInsert = '';
    }
 
    public ngOnInit(): void{
       this.ropa = this._ropaService.findAll();
+   }
+
+   public save(): void{
+      this._ropaService.insert( this.prendaToInsert );
+      this.prendaToInsert = '';
+   }
+
+   public delete( index: number ): void{
+      this._ropaService.delete( index );
    }
 }
