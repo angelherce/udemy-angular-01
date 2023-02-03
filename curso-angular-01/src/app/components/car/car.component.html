@@ -1,19 +1,22 @@
 <h1>Component de Coches</h1>
 
-<form (ngSubmit)="onSubmit()">
+<form #formCar="ngForm" (ngSubmit)="onSubmit()">
    <div class="field">
       <label for="name">Nombre</label>
-      <input type="text" id="name" name="name" [(ngModel)]="car.name" required/>
+      <input type="text" id="name" name="name" #name="ngModel" [(ngModel)]="car.name" required/>
+      <span *ngIf="!name.valid">Nombre del coche es incorrecto</span>
    </div>
 
    <div class="field">
       <label for="cv">Caballaje</label>
-      <input type="number" id="cv" name="cv" [(ngModel)]="car.cv"  required/>
+      <input type="number" id="cv" name="cv" #cv="ngModel" [(ngModel)]="car.cv" required pattern="[0-9]+"/>
+      <span *ngIf="!cv.valid">El caballaje no es correcto</span>
    </div>
 
    <div class="field">
       <label for="color">Color</label>
-      <input type="text" id="color" name="color" [(ngModel)]="car.color"  required/>
+      <input type="text" id="color" name="color" #color="ngModel" [(ngModel)]="car.color" required pattern="((rojo)|(verde)|(azul))"/>
+      <span *ngIf="!color.valid">El color del coche, no es un color válido</span>
    </div>
 
    <div class="field">
