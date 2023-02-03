@@ -1,1 +1,28 @@
 <h1>Component de Coches</h1>
+
+<form (ngSubmit)="onSubmit()">
+   <div class="field">
+      <label for="name">Nombre</label>
+      <input type="text" id="name" name="name" [(ngModel)]="car.name" required/>
+   </div>
+
+   <div class="field">
+      <label for="cv">Caballaje</label>
+      <input type="number" id="cv" name="cv" [(ngModel)]="car.cv"  required/>
+   </div>
+
+   <div class="field">
+      <label for="color">Color</label>
+      <input type="text" id="color" name="color" [(ngModel)]="car.color"  required/>
+   </div>
+
+   <div class="field">
+      <input type="submit" value="Guardar" required/>
+   </div>
+</form>
+
+<div class="field result">
+   <p>{{carSaved.name}}</p>
+   <p>{{carSaved.cv}}</p>
+   <p>{{carSaved.color}}</p>
+</div>
