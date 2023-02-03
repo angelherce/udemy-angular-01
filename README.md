@@ -14,7 +14,7 @@
 - [x] **Sección 6:** _Routing y navegación_
 - [x] **Sección 7:** _Servicios_
 - [x] **Sección 8:** _Pipes_
-- [ ] **Sección 9:** _Formularios_
+- [x] **Sección 9:** _Formularios_
 - [ ] **Sección 10:** _Servicios, HTTP y AJAX_  
 - [ ] **Sección 11:** _NgTemplate (if, else y then)_  
 - [ ] **Sección 12:** _Creando una API REST_  
