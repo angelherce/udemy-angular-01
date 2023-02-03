@@ -10,6 +10,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { HomeComponent } from './components/home/home.component';
 
 import { MultiplierPipe } from './pipes/multiplier.pipe';
+import {CarComponent} from './components/car/car.component';
 
 @NgModule({
    declarations: [
@@ -18,6 +19,7 @@ import { MultiplierPipe } from './pipes/multiplier.pipe';
       EmployeeComponent,
       ContactComponent,
       HomeComponent,
+      CarComponent,
       MultiplierPipe
    ],
    imports: [
