@@ -11,7 +11,7 @@
 - [x] **Sección 3:** _Componenentes y plantillas_
 - [x] **Sección 4:** _TypeScript dentro de Angular_
 - [x] **Sección 5:** _Directivas, binding y eventos_
-- [ ] **Sección 6:** _Routing y navegación_
+- [x] **Sección 6:** _Routing y navegación_
 - [ ] **Sección 7:** _Servicios_
 - [ ] **Sección 8:** _Pipes_
 - [ ] **Sección 9:** _Formularios_
