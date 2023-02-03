@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
-import { routing, appRoutingProviders } from './app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FrutaComponent } from './components/fruta/fruta.component';
 import { EmployeeComponent } from './components/employee/employee.component';
@@ -15,10 +15,10 @@ import { EmployeeComponent } from './components/employee/employee.component';
    ],
    imports: [
       BrowserModule,
-      FormsModule,
-      routing
+      AppRoutingModule,
+      FormsModule
    ],
-   providers: [ appRoutingProviders ],
-   bootstrap: [ AppComponent ]
+   providers: [],
+   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -10,5 +10,8 @@ const routes: Routes = [
    { path: '**', component: EmployeeComponent },
 ];
 
-export const appRoutingProviders: Array<any> = [];
-export const routing: ModuleWithProviders<RouterModule> = RouterModule.forRoot( routes );
+@NgModule({
+  imports: [RouterModule.forRoot( routes )],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
