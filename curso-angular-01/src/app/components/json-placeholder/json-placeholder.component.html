@@ -1,0 +1,8 @@
+<h1>{{title}}</h1>
+
+<hr/>
+<p *ngIf="posts.length < 1">Cargando...</p>
+
+<ul>
+   <li *ngFor="let target of posts ; let i = index">{{i + 1}} - id: {{target.id}} | userId: {{target.userId}} | title: {{target.title}} | body: {{target.body}}</li>
+</ul>

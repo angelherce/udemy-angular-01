@@ -11,6 +11,8 @@ import { HomeComponent } from './components/home/home.component';
 
 import { MultiplierPipe } from './pipes/multiplier.pipe';
 import {CarComponent} from './components/car/car.component';
+import {HttpClientModule} from '@angular/common/http';
+import {JsonPlaceholderComponent} from './components/json-placeholder/json-placeholder.component';
 
 @NgModule({
    declarations: [
@@ -20,12 +22,14 @@ import {CarComponent} from './components/car/car.component';
       ContactComponent,
       HomeComponent,
       CarComponent,
+      JsonPlaceholderComponent,
       MultiplierPipe
    ],
    imports: [
       BrowserModule,
       AppRoutingModule,
-      FormsModule
+      FormsModule,
+      HttpClientModule
    ],
    providers: [],
    bootstrap: [AppComponent]
