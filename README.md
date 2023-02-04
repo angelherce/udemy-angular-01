@@ -16,7 +16,7 @@
 - [x] **Sección 8:** _Pipes_
 - [x] **Sección 9:** _Formularios_
 - [x] **Sección 10:** _Servicios, HTTP y AJAX_  
-- [ ] **Sección 11:** _NgTemplate (if, else y then)_  
+- [x] **Sección 11:** _NgTemplate (if, else y then)_  
 - [ ] **Sección 12:** _Creando una API REST_  
 - [ ] **Sección 13:** _Desarrollando una webapp completa_  
 - [ ] **Sección 14:** _Comunicación entre componentes_  
