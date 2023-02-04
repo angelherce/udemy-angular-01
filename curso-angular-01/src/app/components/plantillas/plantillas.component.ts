@@ -9,4 +9,8 @@ export class PlantillasComponent{
    public admin: boolean = true;
 
    public constructor() {}
+
+   public changeAdmin(): void{
+      this.admin = !this.admin;
+   }
 }
