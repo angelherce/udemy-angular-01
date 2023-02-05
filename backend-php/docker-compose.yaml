@@ -1,0 +1,58 @@
+version: '3'
+
+services:
+  mysql:
+    image: mysql:8.0.30
+    container_name: mysql
+    hostname: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 'root'
+      MYSQL_USER: 'admin'
+      MYSQL_PASSWORD: '123456'
+      MYSQL_DATABASE: 'CURSO_ANGULAR'
+    volumes:
+      - './mysql:/var/lib/mysql'
+      - './database.sql:/docker-entrypoint-initdb.d/database.sql'
+    networks:
+      - net-mysql
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
+
+  phpmyadmin:
+    image: phpmyadmin:5.2.0
+    container_name: phpmyadmin
+    hostname: phpmyadmin
+    restart: always
+    depends_on:
+      - mysql
+    environment:
+      PMA_HOST: 'mysql'
+      PMA_PORT: '3306'
+    networks:
+      - net-mysql
+    ports:
+      - '8080:80'
+
+  php:
+    build: .
+    container_name: php
+    hostname: php
+    restart: always
+    depends_on:
+      - mysql
+    environment:
+      PORT: '80'
+    volumes:
+      - './:/var/www/html'
+    networks:
+      - net-mysql
+    ports:
+      - '80:80'
+    expose:
+      - '80'
+
+networks:
+  net-mysql:
