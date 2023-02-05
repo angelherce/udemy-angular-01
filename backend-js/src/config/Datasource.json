@@ -1,0 +1,6 @@
+{
+  "host": "mysql",
+  "user": "admin",
+  "password": "123456",
+  "database": "CURSO_ANGULAR"
+}

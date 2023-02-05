@@ -3,3 +3,8 @@
 /backend-php/mysql
 /backend-php/vendor
 /backend-php/composer.lock
+/backend-js/.idea
+/backend-js/mysql
+/backend-js/uploads
+/backend-js/node_modules
+/backend-js/package-lock.json
