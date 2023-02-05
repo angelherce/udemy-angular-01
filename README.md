@@ -17,7 +17,7 @@
 - [x] **Sección 9:** _Formularios_
 - [x] **Sección 10:** _Servicios, HTTP y AJAX_  
 - [x] **Sección 11:** _NgTemplate (if, else y then)_  
-- [ ] **Sección 12:** _Creando una API REST_  
+- [x] **Sección 12:** _Creando una API REST_  
 - [ ] **Sección 13:** _Desarrollando una webapp completa_  
 - [ ] **Sección 14:** _Comunicación entre componentes_  
 - [ ] **Sección 15:** _Angular 5_  
@@ -26,3 +26,19 @@
 - [ ] **Sección 18:** _Angular 7, 8, 9, 10 y 11_  
 - [ ] **Sección 19:** _Tips, Tricks y extras_  
 - [ ] **Sección 20:** _CLASES EXTRA_  
+
+---
+
+# API REST
+
+## Levantar Backend JS
+
+```shell
+docker compose -f ./backend-js/docker-compose.yaml up
+```
+
+## Parar Backend JS
+
+```shell
+docker compose -f ./backend-js/docker-compose.yaml down -v
+```
