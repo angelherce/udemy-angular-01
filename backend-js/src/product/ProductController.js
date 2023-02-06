@@ -26,13 +26,14 @@ router.post( `/`, upload.single( 'image' ), ( req, res ) => {
     const isImageExists = req.file != undefined;
     const isAcceptMimetype = isImageExists ? filetypes.test( req.file.mimetype ) : false;
     const isAccepExtension = isImageExists ? filetypes.test( req.file.originalname.toLowerCase() ) : false;
+    const path = isImageExists ? req.file.path : undefined;
 
     if( !isImageExists || (isAcceptMimetype && isAccepExtension) ) {
         const DATA = {
             "name": req.body.name,
             "description": req.body.description,
             "price": req.body.price,
-            "image": req.file.path,
+            "image": path,
         }
         const productsDao = new ProductsDao();
         productsDao.insert( DATA )
