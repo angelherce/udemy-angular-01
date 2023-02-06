@@ -1,1 +1,30 @@
-<h2>{{title}}</h2>
+<header class="row">
+  <div class="col-lg-12">
+    <h2>{{title}}</h2>
+  </div>
+</header>
+
+<main class="row">
+  <div class="col-lg-12">
+    <table class="table">
+      <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Description</th>
+        <th scope="col">Price</th>
+        <th scope="col">Image</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let target of products">
+        <th scope="row">{{target.id}}</th>
+        <td>{{target.name}}</td>
+        <td>{{target.description}}</td>
+        <td>{{target.price}}€</td>
+        <td>{{target.image}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</main>

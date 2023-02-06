@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { catchError, of } from 'rxjs';
+import { HttpErrorResponse } from '@angular/common/http';
+import { ProductService } from '../../services/product/product.service';
+import { Product } from '../../services/product/product.model';
 
 @Component({
   selector: 'app-products-list',
@@ -9,14 +13,20 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class ProductsListComponent implements OnInit {
 
   public title: string = 'Listado de Productos';
+  public products: Array<Product> = [];
 
   public constructor(
     private _route: ActivatedRoute,
-    private _router: Router
+    private _router: Router,
+    private productService: ProductService
   ) { }
 
   public ngOnInit(): void {
     console.log( 'Se ha cargado el componente ProductsListComponent' );
+
+    this.productService.findAll()
+      .pipe( catchError( ( error: HttpErrorResponse ) => { alert( error.message ); return of(  [] ); }))
+      .subscribe(response => this.products = response );
   }
 
 }

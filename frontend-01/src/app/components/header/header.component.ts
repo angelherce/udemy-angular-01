@@ -9,6 +9,8 @@ export class HeaderComponent implements OnInit {
 
   public title: string = 'Productos Angular';
 
+  public HEADER_BG_COLOR: string = '#E03137';
+
   public constructor() { }
 
   public ngOnInit(): void {
