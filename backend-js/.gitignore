@@ -1,7 +1,9 @@
 /.idea
 /mysql
-/uploads
+/uploads/*
 /node_modules
 /package-lock.json
 /docker-compose.yaml.bak
 /dockerfile.bak
+
+!/uploads/default

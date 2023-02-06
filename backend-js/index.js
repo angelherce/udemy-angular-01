@@ -1,6 +1,7 @@
 const express = require( 'express' );
 const bodyParser = require( 'body-parser' );
 const productsController = require( './src/product/ProductController' );
+const ProductsDao = require("./src/product/ProductsDao");
 const PORT = 80;
 
 //EXPRESS INITIALIZE
@@ -16,6 +17,9 @@ app.use(( req, res, next ) => {
     res.header( `Allow`, `GET, POST, PUT, DELETE` );
     next();
 });
+
+//UPLOADS
+app.use( `/uploads`, express.static( 'uploads' ));
 
 //ENDPOINTS
 app.use( '/product', productsController );
