@@ -9,3 +9,13 @@
   background-color: #E03137;
   color: #FFF;
 }
+
+#main{
+  padding: 25px 50px;
+}
+
+#footer{
+  padding: 15px 50px;
+  background-color: #EEE;
+  font-style: italic;
+}
