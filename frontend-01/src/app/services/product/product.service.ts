@@ -36,4 +36,15 @@ export class ProductService {
     const URL = `${this.host}/product`;
     return this.http.post<ResultProductService>( URL, FORM_DATA );
   }
+
+  public update( id: number, product: Product, image: File ): Observable<ResultProductService>{
+    const FORM_DATA = new FormData();
+    product.name != undefined && FORM_DATA.append( 'name', `${product.name}` );
+    product.description != undefined && FORM_DATA.append( 'description', `${product.description}` );
+    product.price != undefined && FORM_DATA.append( 'price', `${product.price}` );
+    image != undefined && image != null && FORM_DATA.append( 'image', image, image.name );
+
+    const URL = `${this.host}/product/${id}`;
+    return this.http.put<ResultProductService>( URL, FORM_DATA );
+  }
 }

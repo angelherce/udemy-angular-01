@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ProductsInsertComponent } from './components/products-insert/products-insert.component';
 import { FormsModule } from '@angular/forms';
 import { ProductsDetailComponent } from './components/products-detail/products-detail.component';
+import { ProductsEditComponent } from './components/products-edit/products-edit.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ProductsDetailComponent } from './components/products-detail/products-d
     FooterComponent,
     ProductsListComponent,
     ProductsInsertComponent,
-    ProductsDetailComponent
+    ProductsDetailComponent,
+    ProductsEditComponent
   ],
   imports: [
     BrowserModule,

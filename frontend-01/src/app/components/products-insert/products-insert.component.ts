@@ -13,7 +13,7 @@ import { ResultProductService } from '../../services/product/result-product-serv
 })
 export class ProductsInsertComponent implements OnInit {
 
-  public title: string = 'Insertar un Producto';
+  public title: string = 'Insertar';
 
   public product: Product = new Product();
 
@@ -36,7 +36,7 @@ export class ProductsInsertComponent implements OnInit {
       .pipe( catchError( ( error: HttpErrorResponse ) => { this.errorMsg = error.message; return of(  new ResultProductService() ); }))
       .subscribe(response => {
         if( response.affectedRows == 1 ){
-          this._router.navigate(['/product-list'])
+          this._router.navigate([`/product-detail/${response.insertId}`])
         }
         else{
           this.errorMsg = `Error al añadir el producto !`;

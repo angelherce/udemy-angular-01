@@ -29,7 +29,10 @@ export class ProductsDetailComponent implements OnInit {
   ) {}
 
   public ngOnInit(): void {
+    console.log( 'Se ha cargado el componente ProductsDetailComponent' );
+
     this._route.params.subscribe( params => this.id = params[`id`] );
+
     this.productService.findById( this.id )
       .pipe( catchError( ( error: HttpErrorResponse ) => { this.errorMsg = error.message; return of( null ); }))
       .subscribe(response => this.product = response );
