@@ -22,7 +22,7 @@
     <footer class="card-footer d-flex justify-content-center">
       <a [routerLink]="['/product-detail/', target.id]" class="btn btn-md btn-success mx-1"><i class="fa-solid fa-eye"></i></a>
       <a [routerLink]="['/product-edit/', target.id]" class="btn btn-md btn-warning mx-1"><i class="fa-solid fa-pen-to-square"></i></a>
-      <a [routerLink]="['/']" class="btn btn-md btn-danger mx-1"><i class="fa-solid fa-trash"></i></a>
+      <button (click)="deleteProduct( target )" class="btn btn-md btn-danger mx-1"><i class="fa-solid fa-trash"></i></button>
     </footer>
   </div>
 </ng-template>

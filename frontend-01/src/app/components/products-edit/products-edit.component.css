@@ -5,3 +5,7 @@
   padding-top: 1px;
   padding-bottom: 1px;
 }
+
+.image-preview img{
+  width: 250px;
+}

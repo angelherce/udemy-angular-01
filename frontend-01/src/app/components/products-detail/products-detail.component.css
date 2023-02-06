@@ -16,3 +16,7 @@
 .error p{
   margin-bottom: 0 !important;
 }
+
+.image{
+  width: 250px;
+}

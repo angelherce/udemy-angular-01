@@ -28,6 +28,8 @@ export class ProductsEditComponent implements OnInit {
 
   public imageDefault: string = `uploads/default`;
 
+  public imagePreview: string;
+
   public constructor(
     private _route: ActivatedRoute,
     private _router: Router,
@@ -52,13 +54,22 @@ export class ProductsEditComponent implements OnInit {
           this._router.navigate([`/product-detail/${this.id}`])
         }
         else{
-          this.errorMsg = `Error al añadir el producto !`;
+          this.errorMsg = `Error al Editar el producto con ID: ${this.id}!`;
         }
       });
   }
 
   public addImage( event: any ): void{
     this.image = event.target.files[0];
+    this.setPreviewImage( event );
+  }
+
+  public setPreviewImage( event: any ): void {
+    const reader = new FileReader();
+    reader.onload = ( e: any ) => {
+      this.imagePreview = e.target.result;
+    };
+    reader.readAsDataURL( event.target.files[0] );
   }
 
 }

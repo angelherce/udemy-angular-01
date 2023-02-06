@@ -13,13 +13,15 @@ import { ResultProductService } from '../../services/product/result-product-serv
 })
 export class ProductsInsertComponent implements OnInit {
 
-  public title: string = 'Insertar';
+  public title: string = 'Añadir';
 
   public product: Product = new Product();
 
   public image: File;
 
   public errorMsg: string = null;
+
+  public imagePreview: string;
 
   constructor(
     private _route: ActivatedRoute,
@@ -46,5 +48,14 @@ export class ProductsInsertComponent implements OnInit {
 
   public addImage( event: any ): void{
     this.image = event.target.files[0];
+    this.setPreviewImage( event );
+  }
+
+  public setPreviewImage( event: any ): void {
+    const reader = new FileReader();
+    reader.onload = ( e: any ) => {
+      this.imagePreview = e.target.result;
+    };
+    reader.readAsDataURL( event.target.files[0] );
   }
 }

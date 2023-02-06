@@ -47,4 +47,9 @@ export class ProductService {
     const URL = `${this.host}/product/${id}`;
     return this.http.put<ResultProductService>( URL, FORM_DATA );
   }
+
+  public delete( id: number ): Observable<ResultProductService>{
+    const URL = `${this.host}/product/${id}`;
+    return this.http.delete<ResultProductService>( URL );
+  }
 }
