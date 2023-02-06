@@ -4,6 +4,7 @@ import { catchError, of } from 'rxjs';
 import { HttpErrorResponse } from '@angular/common/http';
 import { ProductService } from '../../services/product/product.service';
 import { Product } from '../../services/product/product.model';
+import {ResultProductService} from "../../services/product/result-product-service.model";
 
 @Component({
   selector: 'app-products-insert',
@@ -14,7 +15,7 @@ export class ProductsInsertComponent implements OnInit {
 
   public title: string = 'Insertar un Producto';
 
-  public product: Product = new Product(null, '', '', 0, '' );
+  public product: Product = new Product();
 
   public errorMsg: string = null;
 
@@ -33,6 +34,15 @@ export class ProductsInsertComponent implements OnInit {
   }
 
   public onSubmit(): void {
-    console.log( this.product );
+    this.productService.insert( this.product )
+      .pipe( catchError( ( error: HttpErrorResponse ) => { this.errorMsg = error.message; return of(  new ResultProductService() ); }))
+      .subscribe(response => {
+        if( response.affectedRows == 1 ){
+          this._router.navigate(['/product-list'])
+        }
+        else{
+          this.errorMsg = `Error al añadir el producto !`;
+        }
+      });
   }
 }
