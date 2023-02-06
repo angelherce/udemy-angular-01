@@ -8,8 +8,8 @@ import { ProductsInsertComponent } from './components/products-insert/products-i
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
-  { path: 'product', component: ProductsListComponent },
-  { path: 'product/insert', component: ProductsInsertComponent },
+  { path: 'product-list', component: ProductsListComponent },
+  { path: 'product-insert', component: ProductsInsertComponent },
   { path: '**', component: ErrorComponent },
 ];
 
