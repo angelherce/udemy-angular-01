@@ -10,12 +10,12 @@ export class ProductsListComponent implements OnInit {
 
   public title: string = 'Listado de Productos';
 
-  constructor(
+  public constructor(
     private _route: ActivatedRoute,
     private _router: Router
   ) { }
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
     console.log( 'Se ha cargado el componente ProductsListComponent' );
   }
 

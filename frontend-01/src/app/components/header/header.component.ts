@@ -8,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   public title: string = 'Productos Angular';
-  constructor() { }
 
-  ngOnInit(): void {
+  public constructor() { }
+
+  public ngOnInit(): void {
+    console.log( 'Se ha cargado el componente HeaderComponent' );
   }
 
 }

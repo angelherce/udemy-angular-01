@@ -9,10 +9,10 @@ export class HomeComponent implements OnInit {
 
   public title: string = 'WebApp de Productos con Angular';
 
-  constructor() { }
+  public constructor() { }
 
-  ngOnInit(): void {
-    console.log( 'Se ha cargado el componente Home' );
+  public ngOnInit(): void {
+    console.log( 'Se ha cargado el componente HomeComponent' );
   }
 
 }

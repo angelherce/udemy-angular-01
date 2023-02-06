@@ -8,10 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class ErrorComponent implements OnInit {
 
   public title: string = 'Página no encontrada !';
-  constructor() { }
 
-  ngOnInit(): void {
-    console.log( `Se ha cargado el componente Error` );
+  public constructor() { }
+
+  public ngOnInit(): void {
+    console.log( 'Se ha cargado el componente ErrorComponent' );
   }
 
 }

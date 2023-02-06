@@ -7,9 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
+  public constructor() { }
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
+    console.log( 'Se ha cargado el componente MenuComponent' );
   }
 
 }
