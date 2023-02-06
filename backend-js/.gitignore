@@ -1,0 +1,7 @@
+/.idea
+/mysql
+/uploads
+/node_modules
+/package-lock.json
+/docker-compose.yaml.bak
+/dockerfile.bak
