@@ -40,7 +40,7 @@
 
           <div class="mb-3">
             <label for="formProductInsertImage" class="form-label">Imagen</label>
-            <input type="file" class="form-control" id="formProductInsertImage" name="image"/>
+            <input type="file" class="form-control" id="formProductInsertImage" name="image" (change)="addImage($event)"/>
           </div>
 
           <button type="submit" class="btn btn-primary" [disabled]="!formProductInsert.form.valid">Añadir</button>

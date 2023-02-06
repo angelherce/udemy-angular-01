@@ -21,12 +21,12 @@ export class ProductService {
     return this.http.get<Product[]>( URL );
   }
 
-  public insert( product: Product ): Observable<ResultProductService>{
+  public insert( product: Product, image: File ): Observable<ResultProductService>{
     const FORM_DATA = new FormData();
     product.name != undefined && FORM_DATA.append( 'name', `${product.name}` );
     product.description != undefined && FORM_DATA.append( 'description', `${product.description}` );
     product.price != undefined && FORM_DATA.append( 'price', `${product.price}` );
-    product.image != undefined && FORM_DATA.append( 'image', `${product.image}` );
+    image != undefined && image != null && FORM_DATA.append( 'image', image, image.name );
 
     const URL = `${this.host}/product`;
     return this.http.post<ResultProductService>( URL, FORM_DATA );
