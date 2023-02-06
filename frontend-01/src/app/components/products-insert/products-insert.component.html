@@ -14,20 +14,20 @@
           </div>
         </header>
 
-        <form #formProductInsert="ngForm" id="formProductInsert">
+        <form #formProductInsert="ngForm" (ngSubmit)="onSubmit()" id="formProductInsert">
           <div class="mb-3">
             <label for="formProductInsertName" class="form-label">Nombre</label>
-            <input type="email" class="form-control" id="formProductInsertName" name="name" aria-describedby="emailHelp"/>
+            <input type="email" class="form-control" id="formProductInsertName" name="name" #name="ngModel" [(ngModel)]="product.name" aria-describedby="emailHelp"/>
           </div>
 
           <div class="mb-3">
             <label for="formProductInsertDescription" class="form-label">Descripción</label>
-            <textarea class="form-control" id="formProductInsertDescription" name="description"></textarea>
+            <textarea class="form-control" id="formProductInsertDescription" name="description" #description="ngModel" [(ngModel)]="product.description"></textarea>
           </div>
 
           <div class="mb-3">
             <label for="formProductInsertPrice" class="form-label">Precio</label>
-            <input type="number" class="form-control" id="formProductInsertPrice" name="price"/>
+            <input type="number" class="form-control" id="formProductInsertPrice" name="price" #price="ngModel" [(ngModel)]="product.price"/>
           </div>
 
           <div class="mb-3">

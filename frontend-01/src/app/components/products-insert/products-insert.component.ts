@@ -14,6 +14,8 @@ export class ProductsInsertComponent implements OnInit {
 
   public title: string = 'Insertar un Producto';
 
+  public product: Product = new Product(null, '', '', 0, '' );
+
   public errorMsg: string = null;
 
   constructor(
@@ -30,4 +32,7 @@ export class ProductsInsertComponent implements OnInit {
     //   .subscribe(response => this.products = response );
   }
 
+  public onSubmit(): void {
+    console.log( this.product );
+  }
 }
