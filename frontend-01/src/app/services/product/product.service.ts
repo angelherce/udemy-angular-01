@@ -21,6 +21,11 @@ export class ProductService {
     return this.http.get<Product[]>( URL );
   }
 
+  public findById( id: number ): Observable<Product>{
+    const URL = `${this.host}/product/${id}`;
+    return this.http.get<Product>( URL );
+  }
+
   public insert( product: Product, image: File ): Observable<ResultProductService>{
     const FORM_DATA = new FormData();
     product.name != undefined && FORM_DATA.append( 'name', `${product.name}` );

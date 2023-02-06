@@ -1,0 +1,18 @@
+.price{
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.description{
+  font-style: italic;
+}
+
+.error{
+  color: #FFF;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.error p{
+  margin-bottom: 0 !important;
+}
