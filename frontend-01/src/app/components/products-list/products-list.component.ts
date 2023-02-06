@@ -4,6 +4,7 @@ import { catchError, of } from 'rxjs';
 import { HttpErrorResponse } from '@angular/common/http';
 import { ProductService } from '../../services/product/product.service';
 import { Product } from '../../services/product/product.model';
+import { CONFIG } from '../../services/config';
 
 @Component({
   selector: 'app-products-list',
@@ -17,6 +18,10 @@ export class ProductsListComponent implements OnInit {
   public errorMsg: string = null;
 
   public products: Array<Product> = [];
+
+  public urlImages: string = CONFIG.host;
+
+  public imageDefault: string = `uploads/default`;
 
   public constructor(
     private _route: ActivatedRoute,

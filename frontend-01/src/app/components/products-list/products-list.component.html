@@ -4,10 +4,22 @@
   </div>
 </header>
 <main class="row">
-  <div class="col-lg-12">
-    <ng-container *ngIf="errorMsg == null; then table else error"></ng-container>
+  <div class="col-lg-12 d-flex flex-wrap justify-content-center">
+    <ng-container *ngIf="errorMsg == null; then cards else error"></ng-container>
   </div>
 </main>
+
+<ng-template #cards>
+  <div class="card p-3 mx-3 my-3" style="width: 250px;" *ngFor="let target of products">
+    <img src="{{urlImages}}/{{target.image}}" class="card-img-top" alt="..." *ngIf="target.image != null"/>
+    <img src="{{urlImages}}/{{imageDefault}}" class="card-img-top" alt="..." *ngIf="target.image == null"/>
+    <div class="card-body">
+      <h5 class="card-title">{{target.name}}</h5>
+      <p class="card-text">{{target.description}}</p>
+      <p class="price">{{target.price}}€</p>
+    </div>
+  </div>
+</ng-template>
 
 <ng-template #table>
   <table class="table">
