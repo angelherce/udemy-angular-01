@@ -13,6 +13,9 @@ import { Product } from '../../services/product/product.model';
 export class ProductsListComponent implements OnInit {
 
   public title: string = 'Listado de Productos';
+
+  public errorMsg: string = null;
+
   public products: Array<Product> = [];
 
   public constructor(
@@ -25,7 +28,7 @@ export class ProductsListComponent implements OnInit {
     console.log( 'Se ha cargado el componente ProductsListComponent' );
 
     this.productService.findAll()
-      .pipe( catchError( ( error: HttpErrorResponse ) => { alert( error.message ); return of(  [] ); }))
+      .pipe( catchError( ( error: HttpErrorResponse ) => { this.errorMsg = error.message; return of(  [] ); }))
       .subscribe(response => this.products = response );
   }
 
