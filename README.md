@@ -19,7 +19,7 @@
 - [x] **Sección 11:** _NgTemplate (if, else y then)_  
 - [x] **Sección 12:** _Creando una API REST_  
 - [x] **Sección 13:** _Desarrollando una webapp completa_  
-- [ ] **Sección 14:** _Comunicación entre componentes_  
+- [x] **Sección 14:** _Comunicación entre componentes_  
 - [ ] **Sección 15:** _Angular 5_  
 - [ ] **Sección 16:** _Repaso de componentes y directivas en Angular 5_  
 - [ ] **Sección 17:** _Angular 6_  
