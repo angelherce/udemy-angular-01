@@ -14,9 +14,15 @@ export class ParentComponent implements OnInit {
       msg: "Hi World !"
    }
 
+   public dataFromChild: any;
+
   public constructor() { }
 
   public ngOnInit(): void {
   }
 
+  public handlerDataFromChild( event:any ): void{
+     this.dataFromChild = event;
+      alert( event.msg );
+  }
 }
