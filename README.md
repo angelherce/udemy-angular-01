@@ -7,22 +7,38 @@
 ## Contenido del cusro
 
 - [x] **Sección 1:** _Introducción_
-- [ ] **Sección 2:** _Instalaciones y primeros pasos_
-- [ ] **Sección 3:** _Componenentes y plantillas_
-- [ ] **Sección 4:** _TypeScript dentro de Angular_
-- [ ] **Sección 5:** _Directivas, binding y eventos_
-- [ ] **Sección 6:** _Routing y navegación_
-- [ ] **Sección 7:** _Servicios_
-- [ ] **Sección 8:** _Pipes_
-- [ ] **Sección 9:** _Formularios_
-- [ ] **Sección 10:** _Servicios, HTTP y AJAX_  
-- [ ] **Sección 11:** _NgTemplate (if, else y then)_  
-- [ ] **Sección 12:** _Creando una API REST_  
-- [ ] **Sección 13:** _Desarrollando una webapp completa_  
-- [ ] **Sección 14:** _Comunicación entre componentes_  
-- [ ] **Sección 15:** _Angular 5_  
-- [ ] **Sección 16:** _Repaso de componentes y directivas en Angular 5_  
-- [ ] **Sección 17:** _Angular 6_  
-- [ ] **Sección 18:** _Angular 7, 8, 9, 10 y 11_  
-- [ ] **Sección 19:** _Tips, Tricks y extras_  
-- [ ] **Sección 20:** _CLASES EXTRA_  
+- [x] **Sección 2:** _Instalaciones y primeros pasos_
+- [x] **Sección 3:** _Componenentes y plantillas_
+- [x] **Sección 4:** _TypeScript dentro de Angular_
+- [x] **Sección 5:** _Directivas, binding y eventos_
+- [x] **Sección 6:** _Routing y navegación_
+- [x] **Sección 7:** _Servicios_
+- [x] **Sección 8:** _Pipes_
+- [x] **Sección 9:** _Formularios_
+- [x] **Sección 10:** _Servicios, HTTP y AJAX_  
+- [x] **Sección 11:** _NgTemplate (if, else y then)_  
+- [x] **Sección 12:** _Creando una API REST_  
+- [x] **Sección 13:** _Desarrollando una webapp completa_  
+- [x] **Sección 14:** _Comunicación entre componentes_  
+- [x] **Sección 15:** _Angular 5_  
+- [x] **Sección 16:** _Repaso de componentes y directivas en Angular 5_  
+- [x] **Sección 17:** _Angular 6_  
+- [x] **Sección 18:** _Angular 7, 8, 9, 10 y 11_  
+- [x] **Sección 19:** _Tips, Tricks y extras_  
+- [x] **Sección 20:** _CLASES EXTRA_  
+
+---
+
+# API REST
+
+## Levantar Backend JS
+
+```shell
+docker compose -f ./backend-js/docker-compose.yaml up
+```
+
+## Parar Backend JS
+
+```shell
+docker compose -f ./backend-js/docker-compose.yaml down -v
+```

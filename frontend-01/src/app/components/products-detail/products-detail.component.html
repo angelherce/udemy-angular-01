@@ -1,0 +1,46 @@
+<main class="row">
+  <div class="col-lg-12 d-flex flex-wrap justify-content-center">
+    <ng-container *ngIf="errorMsg == null && product != null; then view else error"></ng-container>
+  </div>
+</main>
+
+<ng-template #view>
+  <div class="container-fluid">
+    <header class="row mb-1">
+      <div class="col-lg-12">
+        <h1 class="name">{{product.id}}: {{product.name}}</h1>
+      </div>
+    </header>
+
+    <main class="row">
+      <div class="col-lg-12">
+        <figure class="figure">
+          <img src="{{urlImages}}/{{product.image}}" class="image figure-img img-fluid rounded" alt="..." *ngIf="product.image != null"/>
+          <img src="{{urlImages}}/{{imageDefault}}" class="image figure-img img-fluid rounded" alt="..." *ngIf="product.image == null"/>
+        </figure>
+
+        <div class="row mb-2">
+          <div class="col-lg-12">
+            <span class="price">{{product.price}}€</span>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12">
+            <p class="description">{{product.description}}</p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</ng-template>
+
+<ng-template #error>
+  <div class="container-fluid">
+    <div class="row justify-content-md-center">
+      <div class="error rounded-3 p-3 col-lg-8 bg-danger text-center d-flex align-items-center justify-content-center">
+        <p>{{errorMsg}}</p>
+      </div>
+    </div>
+  </div>
+</ng-template>

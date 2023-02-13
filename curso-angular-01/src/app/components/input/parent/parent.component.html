@@ -1,0 +1,11 @@
+<h1>{{title}}</h1>
+
+<h2>Data From Child</h2>
+
+<ul *ngIf="dataFromChild">
+   <li>{{dataFromChild.msg}}</li>
+</ul>
+
+<hr/>
+
+<app-child [text1]="'Property Value 1'" [text2]="'Property Value 2'" [data]="data" (dataFromChild)="handlerDataFromChild($event)"></app-child>

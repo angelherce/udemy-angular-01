@@ -1,0 +1,53 @@
+hr{
+   margin: 25px 0;
+}
+
+#employees{
+   display: flex;
+}
+
+#employees > div{
+   width: 350px;
+}
+
+#employees > div > h2{
+   text-align: center;
+   margin-top: 50px;
+}
+
+#employees > div > ul{
+   width: 100%;
+   list-style: none;
+}
+
+ul > li {
+   cursor: pointer;
+   padding: 6px;
+   margin: 3px auto;
+   width: 80%;
+   font-weight: bold;
+}
+
+ul > li:hover {
+   background-color: #333;
+   color: #FFF;
+}
+
+#color-selector > input{
+   margin-bottom: 15px;
+}
+
+#color-selector > .field{
+   width: 250px;
+   height: 100px;
+}
+
+#color-selector > .field.correct{
+   border: 10px solid lime;
+   border-radius: 50%;
+}
+
+#color-selector > .field.incorrect{
+   border: 10px solid red;
+   border-radius: 15%;
+}

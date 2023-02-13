@@ -1,0 +1,9 @@
+.active{
+  font-weight: bold;
+  background-color: #AAA;
+  color: #FFF !important;
+}
+
+nav li:hover a{
+  box-shadow: 0px 2px 5px #ACACAC;
+}

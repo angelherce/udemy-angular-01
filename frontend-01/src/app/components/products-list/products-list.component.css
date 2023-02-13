@@ -1,0 +1,14 @@
+.error{
+  color: #FFF;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.error p {
+  margin: 0 !important;
+}
+
+.price {
+  font-size: 20px;
+  font-width: bold;
+}

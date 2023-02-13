@@ -1,0 +1,6 @@
+/.idea
+/mysql
+/vendor
+/composer.lock
+/docker-compose.yaml.bak
+/dockerfile.bak

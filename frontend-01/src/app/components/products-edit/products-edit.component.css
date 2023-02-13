@@ -1,0 +1,11 @@
+.error{
+  color: #FFF;
+  font-style: italic;
+  font-weight: bold;
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+.image-preview img{
+  width: 250px;
+}

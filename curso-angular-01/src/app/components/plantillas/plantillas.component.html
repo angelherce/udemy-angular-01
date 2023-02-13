@@ -1,0 +1,16 @@
+<h1>{{title}}</h1>
+
+<hr/>
+
+<button (click)="changeAdmin()">Cambiar Admin</button>
+
+<hr/>
+
+<ng-container *ngIf="admin; then isAdmin else isNotAdmin"></ng-container>
+<ng-template #isAdmin>
+   <strong style="background-color: lime; color: #333; padding: 10px 15px;">ERES ADMINISTRADOR DE LA WEBAPP</strong>
+</ng-template>
+
+<ng-template #isNotAdmin>
+   <strong style="background-color: red; color: #FFF; padding: 10px 15px;">NO ERES ADMINISTRADOR DE LA WEBAPP</strong>
+</ng-template>

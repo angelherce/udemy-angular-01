@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body{
+   font-family: Arial;
+   margin: 100px 5%;
+}
+
+nav a{
+   padding: 5px;
+   border-radius: 10%;
+   font-weight: bold;
+}
+
+nav a.option-active{
+   background-color: #555;
+   color: #FFF;
+}
+
+hr{
+   margin: 25px 0;
+}
