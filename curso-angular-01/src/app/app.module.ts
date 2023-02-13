@@ -14,6 +14,7 @@ import { CarComponent } from './components/car/car.component';
 import { HttpClientModule } from '@angular/common/http';
 import { JsonPlaceholderComponent } from './components/json-placeholder/json-placeholder.component';
 import { PlantillasComponent } from './components/plantillas/plantillas.component';
+import { ChildComponent } from './components/input/child/child.component';
 
 @NgModule({
    declarations: [
@@ -25,7 +26,8 @@ import { PlantillasComponent } from './components/plantillas/plantillas.componen
       CarComponent,
       JsonPlaceholderComponent,
       PlantillasComponent,
-      MultiplierPipe
+      MultiplierPipe,
+      ChildComponent
    ],
    imports: [
       BrowserModule,

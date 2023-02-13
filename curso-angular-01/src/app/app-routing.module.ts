@@ -7,6 +7,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { CarComponent } from './components/car/car.component';
 import { JsonPlaceholderComponent } from './components/json-placeholder/json-placeholder.component';
 import { PlantillasComponent } from './components/plantillas/plantillas.component';
+import { ChildComponent } from './components/input/child/child.component';
 
 const routes: Routes = [
    { path: '', component: HomeComponent },
@@ -18,6 +19,7 @@ const routes: Routes = [
    { path: 'contact/:msg', component: ContactComponent },
    { path: 'employee', component: EmployeeComponent },
    { path: 'fruta', component: FrutaComponent },
+   { path: 'input/child', component: ChildComponent },
    { path: '**', component: HomeComponent },
 ];
 
