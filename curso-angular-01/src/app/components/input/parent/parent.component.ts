@@ -9,6 +9,11 @@ export class ParentComponent implements OnInit {
 
    public title:string = 'Componente Padre';
 
+   public data:any = {
+      name: "Ángel",
+      msg: "Hi World !"
+   }
+
   public constructor() { }
 
   public ngOnInit(): void {
