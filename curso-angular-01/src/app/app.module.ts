@@ -15,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { JsonPlaceholderComponent } from './components/json-placeholder/json-placeholder.component';
 import { PlantillasComponent } from './components/plantillas/plantillas.component';
 import { ChildComponent } from './components/input/child/child.component';
+import { ParentComponent } from './components/input/parent/parent.component';
 
 @NgModule({
    declarations: [
@@ -27,7 +28,8 @@ import { ChildComponent } from './components/input/child/child.component';
       JsonPlaceholderComponent,
       PlantillasComponent,
       MultiplierPipe,
-      ChildComponent
+      ChildComponent,
+      ParentComponent
    ],
    imports: [
       BrowserModule,
