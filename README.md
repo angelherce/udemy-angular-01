@@ -23,7 +23,7 @@
 - [x] **Sección 15:** _Angular 5_  
 - [x] **Sección 16:** _Repaso de componentes y directivas en Angular 5_  
 - [x] **Sección 17:** _Angular 6_  
-- [ ] **Sección 18:** _Angular 7, 8, 9, 10 y 11_  
+- [x] **Sección 18:** _Angular 7, 8, 9, 10 y 11_  
 - [ ] **Sección 19:** _Tips, Tricks y extras_  
 - [ ] **Sección 20:** _CLASES EXTRA_  
 
